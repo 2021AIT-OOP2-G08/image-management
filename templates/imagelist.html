@@ -1,163 +1,24 @@
-<!doctype html>
-<html>
+
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>日本各地の画像集</title>
-<link rel="stylesheet" href="map_style.css">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta charset="utf-8" />
+<link rel="stylesheet"  href="style.css">
+<title>画像一覧</title>
 </head>
-<table id="japan-map" class="clearfix">
-    <tbody>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="hokkaido" colspan="2" rowspan="2"><div class="hokkaido"><a href="/view">北海道</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="tohoku" colspan="2"><div class="aomori"><a href="/view">青森</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="tohoku"><div class="akita"><a href="/view">秋田</a></td>
-    <td class="tohoku"><div class="iwate"><a href="/view">岩手</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="tohoku"><div class="yamagata"><a href="/view">山形</a></td>
-    <td class="tohoku"><div class="miyazaki"><a href="/view">宮崎</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="chubu"><div class="isikawa"><a href="/view">石川</a></td>
-    <td class="chubu"><div class="toyama"><a href="/view">富山</a></td>
-    <td class="chubu"><div class="niigata"><a href="/view">新潟</a></td>
-    <td class="tohoku" colspan="2"><div class="hukusima"><a href="/view">福島</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="chubu"><div class="hukui"><a href="/view">福井</a></td>
-    <td class="chubu" rowspan="2"><div class="gihu"><a href="/view">岐阜</a></td>
-    <td class="chubu" rowspan="2"><div class="nagano"><a href="/view">長野</a></td>
-    <td class="kanto"><div class="gunma"><a href="/view">群馬</a></td>
-    <td class="kanto"><div class="totigi"><a href="/view">栃木</a></td>
-    </tr>
-    <tr>
-    <td class="kyushu"><div class="saga"><a href="/view">佐賀</a></td>
-    <td class="kyushu"><div class="hukuoka"><a href="/view">福岡</a></td>
-    <td class="kyushu"><div class="ooita"><a href="/view">大分</a></td>
-    <td class="chugoku" rowspan="2"><div class="yamaguti"><a href="/view">山口</a></td>
-    <td class="chugoku"><div class="simane"><a href="/view">島根</a></td>
-    <td class="chugoku"><div class="tottori"><a href="/view">鳥取</a></td>
-    <td class="kinki"><div class="hyougo"><a href="/view">兵庫</a></td>
-    <td class="kinki"><div class="kyouto"><a href="/view">京都</a></td>
-    <td class="kinki"><div class="siga"><a href="/view">滋賀</a></td>
-    <td class="kanto"><div class="saitama"><a href="/view">埼玉</a></td>
-    <td class="kanto"><div class="ibaragi"><a href="/view">茨城</a></td>
-    </tr>
-    <tr>
-    <td class="kyushu"><div class="nagasaki"><a href="/view">長崎</a></td>
-    <td class="kyushu" rowspan="2"><div class="kumamoto"><a href="/view">熊本</a></td>
-    <td class="kyushu" rowspan="2"><div class="miyazaki"><a href="/view">宮崎</a></td>
-    <td class="chugoku"><div class="hirosima"><a href="/view">広島</a></td>
-    <td class="chugoku"><div class="okayama"><a href="/view">岡山</a></td>
-    <td class="kinki"><div class="oosaka"><a href="/view">大阪</a></td>
-    <td class="kinki"><div class="nara"><a href="/view">奈良</a></td>
-    <td class="kinki"><div class="mie"><a href="/view">三重</a></td>
-    <td class="chubu"><div class="aiti"><a href="/view">愛知</a></td>
-    <td class="chubu"><div class="yamanasi"><a href="/view">山梨</a></td>
-    <td class="kanto"><div class="toukyou"><a href="/view">東京都</a></td>
-    <td class="kanto" rowspan="2"><div class="tiba"><a href="/view">千葉</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td class="shikoku"><div class="ehime"><a href="/view">愛媛</a></td>
-    <td class="shikoku"><div class="kagawa"><a href="/view">香川</a></td>
-    <td></td>
-    <td class="kinki" colspan="2"><div class="wakayama"><a href="/view">和歌山</a></td>
-    <td></td>
-    <td></td>
-    <td class="chubu"><div class="sizuoka"><a href="/view">静岡</a></td>
-    <td class="kanto"><div class="kanagawa"><a href="/view">神奈川</a></td>
-    </tr>
-    <tr>
-    <td class="okinawa"><div class="okinawa"><a href="/view">沖縄</a></td>
-    <td class="kyushu" colspan="2"><div class="kagosima"><a href="/view">鹿児島</a></td>
-    <td class="shikoku"><div class="kouti"><a href="/view">高知</a></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    </tbody>
+<body>
+    <h1>{{ prefecture }}</h1>
+    <table>
+        <tr>
+            <th>投稿</th>
+            <th>名前</th>
+        </tr>
+        {% for i in range(len(paths)): %}
+        <tr>
+            <td><img src={{ paths[i] }} width=600></td>
+            <td>{{ locates[i] }}</td>
+        </tr>
+        {% endfor %}
     </table>
+</body>
+</html>
