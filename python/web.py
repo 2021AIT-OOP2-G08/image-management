@@ -6,12 +6,14 @@ ALLOWED_EXTENSIONS = set(['png'])
 
 
 app = Flask(__name__)
+"""
 @app.route('/', methods=['GET', 'POST'])
 #アップロード
 def Home():
     if request.method == 'POST':
         img_file = request.files['img_file']
     return render_template('Home.html')
+"""
 
 @app.route('/')
 #ホーム画面
