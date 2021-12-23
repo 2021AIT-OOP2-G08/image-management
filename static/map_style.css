@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* CSSリセット */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video { 
+	margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } /* HTML5 display-role reset for older browsers  */ article, aside, details, figcaption, figure,  footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; 
+}
+
+body {
+  font-family: "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #000000;
+	background-color: #ffffff;
+}
+
+div.hokkaido {	
+	width: 133px;
+	height: 70px;
+    text-align:center;
+    position: relative;
+}
+
+div.aomori {
+	width: 93px;
+	height: 43px;
+	left: 21px;
+	top: 96px;
+}
+div.akita {
+	width: 67px;
+	height: 42px;
+	left: 3px;
+	top: 139px;
+
+}
+div.iwate {
+	width: 67px;
+	height: 42px;
+	left: 70px;
+	top: 139px;
+}
+div.yamagata {
+	width: 67px;
+	height: 42px;
+	top: 181px;
+	left: 3px;
+}
+div.miyagi {
+	width: 67px;
+	height: 42px;
+	top: 181px;
+	left: 70px;
+}
+div.fukushima {
+	width: 67px;
+	height: 42px;
+	top: 223px;
+	left: 70px;
+}
+
+/* 関東 */
+div.ibaraki {
+	width: 52px;
+	height: 85px;
+	top: 0px;
+	left: 100px;
+}
+div.tochigi {
+	width: 50px;
+	height: 42px;
+	top: 0px;
+	left: 50px;
+}
+div.gunma {
+	width: 50px;
+	height: 42px;
+	top: 0px;
+	left: 0px;
+}
+div.saitama {
+	width: 100px;
+	height: 43px;
+	top: 42px;
+	left: 0px;
+}
+div.chiba {
+	width: 52px;
+	height: 84px;
+	top: 85px;
+	left: 100px;
+}
+div.tokyo {
+	width: 100px;
+	height: 42px;
+	top: 85px;
+	left: 0px;
+}
+div.kanagawa {
+	width: 67px;
+	height: 42px;
+	top: 127px;
+	left: 0px;
+}
+
+/* 中部 */
+div.nigata {
+	width: 85px;
+	height: 42px;
+	left: 185px;
+}
+div.toyama {
+	width: 67px;
+	height: 42px;
+	left: 118px;
+}
+div.ishikawa {
+	width: 50px;
+	height: 57px;
+	left: 68px;
+}
+div.fukui {
+	width: 68px;
+	height: 42px;
+	left: 0px;
+	z-index: 2;
+}
+div.nagano {
+	width: 67px;
+	height: 85px;
+	left: 118px;
+	top: 42px
+}
+div.yamanashi {
+	width: 67px;
+	height: 42px;
+	left: 118px;
+	top: 127px;
+}
+div.gifu {
+	width: 50px;
+	height: 55px;
+	left: 68px;
+	top: 57px
+}
+div.shizuoka {
+	width: 67px;
+	height: 42px;
+	left: 118px;
+	top: 169px;
+}
+div.aichi {
+	width: 50px;
+	height: 57px;
+	top: 112px;
+	left: 68px;
+}
+
+/* 近畿 */
+div.kyoto {
+	width: 67px;
+	height: 84px;
+	left: 51px;
+}
+div.shiga {
+	width: 68px;
+	height: 42px;
+	top: 42px;
+	left: 118px;
+}
+div.osaka {
+	width: 67px;
+	height: 85px;
+	top: 84px;
+	left: 51px;
+}
+div.nara {
+	width: 34px;
+	height: 85px;
+	top: 84px;
+	left: 118px;
+}
+div.mie {
+	width: 34px;
+	height: 85px;
+	top: 84px;
+	left: 152px;
+}
+div.wakayama {
+	width: 113px;
+	height: 42px;
+	top: 169px;
+	left: 61px;
+}
+div.hyougo {
+	width: 51px;
+	height: 98px;
+	left: 0px;
+}
+
+/* 中国 */
+div.tottori {
+	width: 50px;
+	height: 49px;
+	left: 101px;
+}
+div.okayama {
+	width: 50px;
+	height: 49px;
+	top: 49px;
+	left: 101px;
+}
+div.shimane {
+	width: 51px;
+	height: 49px;
+	left: 50px;
+}
+div.hiroshima {
+	width: 51px;
+	height: 49px;
+	top: 49px;
+	left: 50px;
+}
+div.yamaguchi {
+	width: 50px;
+	height: 98px;
+	left: 0px;
+}
+
+/* 四国 */
+div.kagawa {
+	width: 92px;
+	height: 42px;
+	right: 0px;
+}
+div.ehime {
+	width: 92px;
+	height: 42px;
+	left: 0px;
+}
+div.tokushima {
+	width: 92px;
+	height: 42px;
+	right: 0px;
+	top: 42px;
+}
+div.kouchi {
+	width: 92px;
+	height: 42px;
+	left: 0px;
+	top: 42px;
+}
+
+/* 九州・沖縄 */
+div.fukuoka {
+	width: 50px;
+	height: 50px;
+	left: 101px;
+	top: 0px;
+}
+div.saga {
+	width: 50px;
+	height: 50px;
+	left: 51px;
+	top: 0px;
+}
+div.nagasaki {
+	width: 50px;
+	height: 50px;
+	left: 1px;
+	top: 0px;
+}
+div.oita {
+	width: 50px;
+	height: 50px;
+	left: 101px;
+	top: 50px;
+}
+div.kumamoto {
+	width: 50px;
+	height: 100px;
+	left: 51px;
+	top: 50px;
+}
+div.miyazaki {
+	width: 50px;
+	height: 50px;
+	left: 101px;
+	top: 100px;
+}
+div.kagoshima {
+	width: 68px;
+	height: 49px;
+	left: 83px;
+	top: 150px;
+}
+div.okinawa {
+	width: 50px;
+	height: 50px;
+	left: 1px;
+	top: 197px;
+}
+
+
