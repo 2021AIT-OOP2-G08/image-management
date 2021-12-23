@@ -26,11 +26,13 @@
 ## 使用言語
 
 - html/css
+- javascript
 - python
 
 ## 仕様ライブラリ
 
 - flask
+- Maps JavaScript API
 
 ## 仕様
 
