@@ -20,8 +20,6 @@ def up():
 #画像表示、画像リスト表示
 @app.route('/view')
 def image():
-    
-
     return render_template('imagelist.html')
 
 
