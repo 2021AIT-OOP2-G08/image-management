@@ -2,11 +2,13 @@ from os import read
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
-@app.route('/', methods=["POST"])
+
+#日本地図
+@app.route('/')
 def Home():
     return render_template('map.html')
 
-# http://127.0.0.1:5000/address
+#画像アップロード、csv書き込み
 @app.route('/upload', methods=["GET"])
 def up():
     return render_template('upload.html')
@@ -14,9 +16,11 @@ def up():
     image_name = request.form.get("im",None)
     image_pass = request.form.get("imp",None)
 
-# http://127.0.0.1:5000/
+#画像表示、画像リスト表示
 @app.route('/view')
 def image():
+    
+
     return render_template('imagelist.html')
 
 
