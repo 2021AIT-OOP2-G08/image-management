@@ -1,32 +1,25 @@
-# request フォームから送信した情報を扱うためのモジュール
-from flask import Flask, render_template, request, redirect, url_for
-
-# アップロードされる拡張子の制限
-ALLOWED_EXTENSIONS = set(['png'])
-
+from os import read
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
-
-@app.route('/')
-#ホーム画面
-def map():
+@app.route('/', methods=["POST"])
+def Home():
     return render_template('map.html')
 
-@app.route('/toyama')
-#ホーム画面
-def toyama():
-    return render_template('map.html')
-
-#画像一覧ページに遷移
-@app.route('/imagelist', methods=["POST", "GET"])
-def imagelist(name):
-    return render_template('imagelist.html', name=name)
-
-#アップロード画面に遷移
-@app.route('/upload', methods=["POST"])
-def upload():
+# http://127.0.0.1:5000/address
+@app.route('/upload', methods=["GET"])
+def up():
     return render_template('upload.html')
+    #データの登録処理
+    image_name = request.form.get("im",None)
+    image_pass = request.form.get("imp",None)
+
+# http://127.0.0.1:5000/
+@app.route('/view')
+def image():
+    return render_template('imagelist.html')
+
 
 if __name__ == "__main__":
     # debugモードが不要の場合は、debug=Trueを消してください
-    app.run(host="localhost", port=8888, debug=True)
+    app.run(debug=True)
