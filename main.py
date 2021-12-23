@@ -23,7 +23,7 @@ def image():
     
 
     return render_template('imagelist.html')
-
+    
 
 if __name__ == "__main__":
     # debugモードが不要の場合は、debug=Trueを消してください
