@@ -18,7 +18,21 @@
             <ul calss = "nav">
                 <li class = "nav-item"><a class = "nav-link" href = "/map"></a>地図選択</li>
             </ul>
-    </nav>
         </div>
+    </nav>
+    <div class="container mt-5">
+        <h1>画像を選択してください</h1>
+        <form enctype="multipart/form-data" action="/upload" method="post">
+            <div class="input-group">
+                <input class="form-control form-control-lg" type="file" name="file">
+                <button type="submit" class="btn btn-primary">アップロード</button>
+            </div>
+        </form>
+        {% if message %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+        {% endif %}
+    </div>
 </body>
 </html>
