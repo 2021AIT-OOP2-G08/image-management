@@ -12,10 +12,15 @@ app = Flask(__name__)
 def map():
     return render_template('map.html')
 
+@app.route('/toyama')
+#ホーム画面
+def toyama():
+    return render_template('map.html')
+
 #画像一覧ページに遷移
-@app.route('/imagelist', methods=["POST"])
-def imagelist():
-    return render_template('imagelist.html')
+@app.route('/imagelist', methods=["POST", "GET"])
+def imagelist(name):
+    return render_template('imagelist.html', name=name)
 
 #アップロード画面に遷移
 @app.route('/upload', methods=["POST"])
