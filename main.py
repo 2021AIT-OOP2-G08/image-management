@@ -1,6 +1,7 @@
 from os import read
 from flask import Flask, request, render_template
 import csv
+import glob
 
 app = Flask(__name__)
 
@@ -24,7 +25,15 @@ def up():
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
 def image():
-    return render_template('imagelist.html')
+    #画像保存用のフォルダを読み込み、画像のパスをリストに入れる。
+    paths = glob.glob("./images/*")
+    #都道府県名を取得
+    pref = request.args.get("pref",None)
+
+    #csvファイルから場所の情報を取得する
+
+    return render_template('upload.html', paths=paths,
+                                        prefecture=pref)
 
 
 if __name__ == "__main__":
