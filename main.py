@@ -9,6 +9,10 @@ app = Flask(__name__)
 def Home():
     return render_template('map.html')
 
+
+#　都道府県名を取得したい場合
+#  変数名 = request.args.get("pref", None)
+
 #画像アップロード、csv書き込み
 @app.route('/upload', methods=["GET"])
 def up():
@@ -18,10 +22,8 @@ def up():
     image_pass = request.form.get("imp",None)
 
 #画像表示、画像リスト表示
-@app.route('/view')
+@app.route('/view', methods=["GET"])
 def image():
-    
-
     return render_template('imagelist.html')
     
 
