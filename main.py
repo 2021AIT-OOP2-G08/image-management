@@ -24,7 +24,16 @@ def up():
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
 def image():
-    return render_template('imagelist.html')
+    #都道府県名を取得
+    pref = request.args.get("pref",None)
+    #csvから該当の都道府県名を含むデータを取得
+    data = []
+    with open('image.csv') as f:
+        reader = csv.DictReader(f)
+        for r in reader:
+            if(r['prefecture'] == pref):
+                data.append(r)
+    return render_template('imagelist.html',prefecture = pref,data = data)
     
 
 if __name__ == "__main__":
