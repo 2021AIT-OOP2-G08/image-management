@@ -32,7 +32,7 @@ def image():
 
     #csvファイルから場所の情報を取得する
 
-    return render_template('upload.html', paths=paths,
+    return render_template('imagelist.html', paths=paths,
                                         prefecture=pref)
 
 
