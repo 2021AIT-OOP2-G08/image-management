@@ -13,6 +13,18 @@
             <th>投稿</th>
             <th>名前</th>
         </tr>
+        <!--
+            都道府県別にフィルタされたdict型が集まったリストがmain.py
+            から渡されてくる。
+            例：data=[{'preffecture':'hokkaido','path':'./images/test.jpg',
+                        'locate':✖️×スキー場},
+                        {'prefecture':'hokkaido',...},
+                        {'prefecture':'hokkaido',...}]
+            例：各要素の取り出し方
+                data[インデックス]['prefecture']
+                data[インデックス]['path']
+                など
+        -->
         {% for i in range(len(paths)): %}
         <tr>
             <td><img src={{ paths[i] }} width=600></td>
