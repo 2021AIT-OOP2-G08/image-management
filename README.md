@@ -1,4 +1,5 @@
 # image-management
+都道府県別に写真をアップロード/閲覧できるシステム
 
 ## メンバー
 
@@ -25,15 +26,18 @@
 
 - チームリーダー/x20064 成瀬颯汰
 
-## 使用言語
+## 使用言語・フレームワーク
+
+| 言語　/　FW　　　　　　　| Version 　　　　　　　　|
+|:-----------|------------:|
+| Python     | 3.9.7       |
+| Flask      | 2.0.2       |
 
 - html/css
 - javascript
-- python
 
 ## 仕様ライブラリ
 
-- flask
 - Maps JavaScript API
 
 ## 仕様
