@@ -25,12 +25,14 @@
                 data[インデックス]['path']
                 など
         -->
-        {% for i in range(len(paths)): %}
+        {% for i in range(length): %}
         <tr>
-            <td><img src={{ paths[i] }} width=600></td>
-            <td>{{ locates[i] }}</td>
+            <td><img src={{ data[i]['path'] }} width=600></td>
+            <td>{{ data[i]['locate'] }}</td>
         </tr>
         {% endfor %}
+
+        
     </table>
 </body>
 </html>
