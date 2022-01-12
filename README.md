@@ -36,6 +36,13 @@
 - html/css
 - javascript
 
+## Usage
+### Webインターフェイスの起動
+
+```
+$ python main.py
+```
+
 ## 仕様ライブラリ
 
 - Maps JavaScript API
