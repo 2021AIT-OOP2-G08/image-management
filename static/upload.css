@@ -1,3 +1,28 @@
+.container mt-5{
+	width: 90%;
+	max-width: 1040px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color:#ffffff
+}
+.span.navbar-brand mb-0 h1{
+	font-family: "ヒラギノ角ゴ";
+}
+
+h1 {
+	font-family: "ヒラギノ角ゴ";
+	border-bottom: solid 3px gray;
+	position: relative;
+	color: red;
+  }
+  
+.p.image_name{
+	font-family: "ヒラギノ角ゴ";	
+}
+
+.p.image_auto{
+	font-family: "ヒラギノ角ゴ";	
+}
 .cp_ipselect {
 	overflow: hidden;
 	width: 90%;
