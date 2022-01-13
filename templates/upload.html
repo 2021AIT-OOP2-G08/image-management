@@ -3,28 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="/static/upload.css">
+    <link rel="stylesheet"  href="{{ url_for('static', filename='upload.css') }}">
 
     <title>ファイルアップロード</title>
 </head>
 <body>
-    <nav class = "navbar navber-light bg-light">
-        <div class = "container">
-            <span class = "navbar-brand mb-0 h1">アップロード画面</span>
-            <!--<ul calss = "nav">-->
-             <a href="/">地図選択へ</a>
-            <!--</ul>-->
-        </div>
-    </nav>
     <div class="container mt-5">
         <h1>画像を選択してください</h1>
         <form enctype="multipart/form-data" action="/upload" method="post">
             <div class="input-group">
                 <input class="form-control form-control-lg" type="file" name="file">
-                <p class = "image_name">画像の名前:<br>
+                <p class = "image_name">画像の名前:「必須」<br>
                     <input type="text" name="name"></p>
                 
-                <p class = "image_auto">画像の詳細:<br>
+                <p class = "image_auto">画像の詳細:「任意」<br>
                     <input type="text" name="ditail"></p>
         
                     <div class="cp_ipselect cp_sl00">
@@ -80,7 +72,17 @@
                         </select>
                         </div>
                     <button type="submit" class="btn btn-primary">アップロード</button>
+
+                    <nav class = "navbar navber-light bg-light">
+                        <div class = "container">
+                            <span class = "navbar-brand mb-0 h1">アップロード画面</span>
+                            <!--<ul calss = "nav">-->
+                             <a href="/">地図選択へ</a>
+                            <!--</ul>-->
+                        </div>
+                    </nav>
             </div>
+            
         </form>        
         {% if message %}
         <div class="alert alert-success" role="alert">

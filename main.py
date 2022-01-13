@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 import csv
 from werkzeug.utils import secure_filename
 
-app = Flask(__name__,static_folder='./static/images')
+app = Flask(__name__)
 
 #日本地図
 @app.route('/')
@@ -48,9 +48,8 @@ def up():
     fs.save('static/images/' + secure_filename(fs.filename))
 
 
-    with open('image.csv',"w") as f:
-        csv.dump(data,f,indent =3)
-        
+    
+
     return render_template('upload.html', message='アップロードに成功しました。')
   
 #画像表示、画像リスト表示

@@ -6,22 +6,23 @@
 	background-color:#ffffff
 }
 .span.navbar-brand mb-0 h1{
-	font-family: "ヒラギノ角ゴ";
+	font-family: "ヒラギノ角ゴシック";
 }
 
 h1 {
-	font-family: "ヒラギノ角ゴ";
+	font-family: "ヒラギノ角ゴシック";
 	border-bottom: solid 3px gray;
 	position: relative;
-	color: red;
+	color: black;
   }
   
-.p.image_name{
-	font-family: "ヒラギノ角ゴ";	
+p.image_name{
+	font-family: "ヒラギノ角ゴシック";	
+	
 }
 
-.p.image_auto{
-	font-family: "ヒラギノ角ゴ";	
+p.image_auto{
+	font-family: "ヒラギノ角ゴシック";	
 }
 .cp_ipselect {
 	overflow: hidden;
@@ -49,7 +50,7 @@ h1 {
 .cp_ipselect.cp_sl00 {
 	position: relative;
 	border-radius: 2px;
-	border: 2px solid #da3c41;
+	border: 2px solid #838383;
   border-radius: 50px;
 	background: #ffffff;
 }
