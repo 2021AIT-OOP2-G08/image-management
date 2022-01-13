@@ -3,15 +3,10 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet"  href={{ url_for('static', filename=e['path']) }}>
+<link rel="stylesheet"  href={{ url_for('static', filename="imagelist.css") }}>
 <title>画像一覧</title>
 </head>
-<style>
-    div.pic_frame {
-        display: inline-block;
-        text-align: center;
-    }
-</style>
+
 
 <body>
     <h1 class="title">{{ prefecture }}</h1>
@@ -43,7 +38,7 @@
     -->
     {% for e in data: %}
         <div class="pic_frame">
-            <img src={{ url_for('static', filename=e['path']) }} height=300>
+            <img src={{ url_for('static', filename=e["path"]) }} height=300>
             <p>{{ e['detail'] }}</p>
         </div>
     {% endfor %}
