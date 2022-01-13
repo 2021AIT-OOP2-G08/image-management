@@ -3,7 +3,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet"  href="/imagelist.css">
+<link rel="stylesheet"  href="../static/imagelist.css">
 <title>画像一覧</title>
 </head>
 <style>
@@ -22,17 +22,6 @@
             <th>投稿</th>
             <th>名前</th>
         </tr>
-        
-            都道府県別にフィルタされたdict型が集まったリストがmain.py
-            から渡されてくる。
-            例：data=[{'preffecture':'hokkaido','path':'./images/test.jpg',
-                        'locate':✖️×スキー場},
-                        {'prefecture':'hokkaido',...},
-                        {'prefecture':'hokkaido',...}]
-            例：各要素の取り出し方
-                data[インデックス]['prefecture']
-                data[インデックス]['path']
-                など
         
         {% for e in data: %}
         <tr>
@@ -54,7 +43,7 @@
     -->
     {% for e in data: %}
         <div class="pic_frame">
-            <img src={{ e['path'] }} width=300>
+            <img src={{ e['path'] }} height=300>
             <p>{{ e['detail'] }}</p>
         </div>
     {% endfor %}
