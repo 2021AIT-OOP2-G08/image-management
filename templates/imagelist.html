@@ -3,17 +3,18 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8" />
-<link rel="stylesheet"  href="style.css">
+<link rel="stylesheet"  href="/imagelist.css">
 <title>画像一覧</title>
-<style>
-    .pic_frame {
-      display: inline-block;
-      text-align: center;
-    }
-  </style>
 </head>
+<style>
+    div.pic_frame {
+        display: inline-block;
+        text-align: center;
+    }
+</style>
+
 <body>
-    <h1>{{ prefecture }}</h1>
+    <h1 class="title">{{ prefecture }}</h1>
 
     <!--
     <table>
@@ -41,13 +42,25 @@
         </tr>
         {% endfor %}
     -->
-
+    <!--
         {% for e in data: %}
-            <div class="pic_frame">
-                <img src={{ e['path'] }} width=300>
-                <p>{{ e['detail'] }}</p>
-            </div>
+        <tr>
+            <td><img src={{ e['path'] }} width=400>aaa</td>
+            <td><img src={{ e['path'] }} width=600>bbb</td>
+            <td><img src={{ e['path'] }} width=500>ccc</td>
+            <td>{{ e['locate'] }}</td>
+        </tr>
         {% endfor %}
+    -->
+    {% for e in data: %}
+        <div class="pic_frame">
+            <img src={{ e['path'] }} width=300>
+            <p>{{ e['detail'] }}</p>
+        </div>
+    {% endfor %}
+
+   
+    
 
         
     </table>
