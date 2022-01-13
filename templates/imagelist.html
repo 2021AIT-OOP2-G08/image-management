@@ -25,10 +25,10 @@
                 data[インデックス]['path']
                 など
         -->
-        {% for i in range(length): %}
+        {% for e in data: %}
         <tr>
-            <td><img src={{ data[i]['path'] }} width=600></td>
-            <td>{{ data[i]['locate'] }}</td>
+            <td><img src={{ e['path'] }} width=600></td>
+            <td>{{ e['locate'] }}</td>
         </tr>
         {% endfor %}
 
