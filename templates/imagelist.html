@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet"  href="style.css">
+<title>画像一覧</title>
+</head>
+<body>
+    <h1>{{ prefecture }}</h1>
+    <table>
+        <tr>
+            <th>投稿</th>
+            <th>名前</th>
+        </tr>
+        <!--
+            都道府県別にフィルタされたdict型が集まったリストがmain.py
+            から渡されてくる。
+            例：data=[{'preffecture':'hokkaido','path':'./images/test.jpg',
+                        'locate':✖️×スキー場},
+                        {'prefecture':'hokkaido',...},
+                        {'prefecture':'hokkaido',...}]
+            例：各要素の取り出し方
+                data[インデックス]['prefecture']
+                data[インデックス]['path']
+                など
+        -->
+        {% for e in data: %}
+        <tr>
+            <td><img src={{ e['path'] }} width=600></td>
+            <td>{{ e['locate'] }}</td>
+        </tr>
+        {% endfor %}
+
+        
+    </table>
+</body>
+</html>

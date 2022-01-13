@@ -2,7 +2,7 @@ from os import read
 from flask import Flask, request, render_template
 import csv
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='./images')
 
 #日本地図
 @app.route('/')
@@ -34,10 +34,8 @@ def up():
     with open('image.csv',"w") as f:
         csv.dump(data,f,indent =3)
     
-    return 
-
-
-
+    return render_template('upload.html')
+  
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
 def image():
