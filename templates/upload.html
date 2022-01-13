@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="/static/upload.css">
 
     <title>ファイルアップロード</title>
 </head>
@@ -20,11 +21,11 @@
         <form enctype="multipart/form-data" action="/upload" method="post">
             <div class="input-group">
                 <input class="form-control form-control-lg" type="file" name="file">
-                <p>画像の名前:<br>
+                <p class = "image_name">画像の名前:<br>
                     <input type="text" name="name"></p>
                 
-                <p>画像の詳細:<br>
-                    <input type="text" name="name"></p>
+                <p class = "image_auto">画像の詳細:<br>
+                    <input type="text" name="ditail"></p>
         
                     <div class="cp_ipselect cp_sl00">
                         <select name = "prefecture">
