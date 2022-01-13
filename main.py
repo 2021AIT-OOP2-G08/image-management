@@ -1,6 +1,7 @@
 from os import read
 from flask import Flask, request, render_template
 import csv
+from werkzeug.utils import secure_filename
 
 app = Flask(__name__,static_folder='./images')
 
@@ -14,16 +15,25 @@ def Home():
 #  変数名 = request.args.get("pref", None)
 
 #画像アップロード、csv書き込み
-@app.route('/upload', methods=["GET"])
+@app.route('/upload', methods=["GET",'POST'])
 def up():
-    return render_template('upload.html')
     #データの登録処理
     image_name = request.form.get("im",None)
     image_pass = request.form.get("imp",None)
-    #画像のアップロード先のディレクトリ
-    upload_folder = './static/images'
+
+    if 'file' not in request.files:
+        return render_template("upload.html", message="ファイルを指定してください。")
+
+    #画像ファイルの受け取り
+    fs = request.files['file']
+
+    if '' == fs.filename:
+        return render_template("upload.html", message="ファイルを指定してください。")
+
     #画像を保存
-    
+    fs.save('static/images/' + secure_filename(fs.filename))
+
+    return render_template('upload.html', message='アップロードに成功しました。')
 
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
