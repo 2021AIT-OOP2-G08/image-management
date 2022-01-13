@@ -45,9 +45,6 @@ def up():
 
     #画像を保存
     fs.save('static/images/' + secure_filename(fs.filename))
-
-    with open('image.csv',"w") as f:
-        csv.dump(data,f,indent =3)
         
     return render_template('upload.html', message='アップロードに成功しました。')
   
