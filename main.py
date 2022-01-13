@@ -17,7 +17,7 @@ def Home():
 #画像アップロード、csv書き込み
 @app.route('/upload', methods=["GET","POST"])
 def up():
-    """
+    
     #データの登録処理
     prefecture_name = request.form.get("prefecture",None)
     image_pass = request.form.get("name",None)
@@ -50,8 +50,6 @@ def up():
 
     with open('image.csv',"w") as f:
         csv.dump(data,f,indent =3)
-        """
-
         
     return render_template('upload.html', message='アップロードに成功しました。')
   
