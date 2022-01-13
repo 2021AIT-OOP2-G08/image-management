@@ -21,9 +21,9 @@ def up():
     image_name = request.form.get("im",None)
     image_pass = request.form.get("imp",None)
     #画像のアップロード先のディレクトリ
-    UPLOAD_FOLDER = './images'
-    #アップロードされる拡張子の制限
-    ALLOWED_EXTENSIONS = set([jpg])
+    upload_folder = './static/images'
+    #画像を保存
+    
 
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
