@@ -2,7 +2,7 @@ from os import read
 from flask import Flask, request, render_template
 import csv
 
-app = Flask(__name__)
+app = Flask(__name__,static_folder='./images')
 
 #日本地図
 @app.route('/')
