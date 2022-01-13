@@ -15,24 +15,22 @@ def Home():
 #  変数名 = request.args.get("pref", None)
 
 #画像アップロード、csv書き込み
-@app.route('/upload', methods=["GET","POST"])
+@app.route('/upload', methods=["GET",'POST'])
 def up():
     #データの登録処理
-    prefecture_name = request.form.get("prefecture",None)
-    image_pass = request.form.get("name",None)
-    detail = request.form.get("detail",None)
+    prefecture_name = request.form.get("im",None)
+    image_pass = request.form.get("imp",None)
+    detail = request.form.get("de",None)
 
     with open('image.csv') as f:
-        csv_data = csv.reader(f)
-        add_data = {"prefecture" : prefecture_name , "image" : image_pass , "detail" : detail}
-        data = []
-        for i in csv_data:
-            data.append(i)
-        data.append(add_data)
+        csv_data = csv.load(f)
     
-    with open('image.csv',"w") as f:
-        writer = csv.writer(f)
-        writer.writerows(data)
+    add_data = {"prefecture" : prefecture_name , "image" : image_pass , "detail" : detail}
+    data = []
+
+    for i in csv_data:
+        data.append(i)
+    data.append(add_data)
 
     if 'file' not in request.files:
         return render_template("upload.html", message="ファイルを指定してください。")
