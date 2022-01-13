@@ -27,7 +27,7 @@
         -->
         {% for e in data: %}
         <tr>
-            <td><img src={{ e['path'] }} width=600></td>
+            <td><img src={{ {{ url_for('static', filename=e['path']) }} width=600></td>
             <td>{{ e['locate'] }}</td>
         </tr>
         {% endfor %}
