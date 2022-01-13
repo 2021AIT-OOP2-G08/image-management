@@ -20,6 +20,10 @@ def up():
     #データの登録処理
     image_name = request.form.get("im",None)
     image_pass = request.form.get("imp",None)
+    #画像のアップロード先のディレクトリ
+    UPLOAD_FOLDER = './images'
+    #アップロードされる拡張子の制限
+    ALLOWED_EXTENSIONS = set([jpg])
 
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
