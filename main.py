@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 import csv
 from werkzeug.utils import secure_filename
 
-app = Flask(__name__,static_folder='./static/images')
+app = Flask(__name__)
 
 #日本地図
 @app.route('/')
