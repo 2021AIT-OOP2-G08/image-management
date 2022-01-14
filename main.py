@@ -46,10 +46,6 @@ def up():
 
     #画像を保存
     fs.save('static/images/' + secure_filename(fs.filename))
-
-
-    
-
     return render_template('upload.html', message='アップロードに成功しました。')
   
 #画像表示、画像リスト表示
