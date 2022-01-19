@@ -2,3 +2,10 @@ div.pic_frame {
     display: inline-block;
     text-align: center;
   }
+.card {
+    width: 500px;
+    margin: 0px;
+}
+.card-body{
+    text-align: center;
+}
