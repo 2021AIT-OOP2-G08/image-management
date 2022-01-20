@@ -34,9 +34,9 @@ def upload():
     #画像を保存
     fs.save('static/images/' + filename)
     item = {
-        'prefecture': request.form.get("prefecture",None),
-        'name': request.form.get("name",None),
-        'detail': request.form.get("detail",None),
+        'prefecture': request.form.get("prefecture",""),
+        'name': request.form.get("name",""),
+        'detail': request.form.get("detail",""),
         'path' : "static/images/" + filename
     }
     db = DB()
