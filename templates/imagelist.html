@@ -29,35 +29,40 @@
             </li>
         </ul>
      </header>
-    
 
-    <!-- <div class="container">
-        <div class="row g-3">
-            {% for e in data: %}
-                <div class="col-12 col-md-6 col-lg-4"></div>
-                    <div class="card">
-                        <img src={{ url_for('static', filename=e["path"]) }} class="card-img-top">
-                        <h5 class="card-title">{{ e['detail'] }}</h5>
+     <div class="container">
+        <!-- <h1>{{ prefecture }}</h1> -->
+        
+
+        <!-- <div class="container">
+            <div class="row g-3">
+                {% for e in data: %}
+                    <div class="col-12 col-md-6 col-lg-4"></div>
+                        <div class="card">
+                            <img src={{ url_for('static', filename=e["path"]) }} class="card-img-top">
+                            <h5 class="card-title">{{ e['detail'] }}</h5>
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
+            </div>
+        </div> -->
+
+        <div class="image-container">
+            {% for e in data: %}
+            <div class="panel">
+                <div class="image"><img src={{ url_for('static', filename=e["path"]) }} height="300" alt="" loading="lazy"></div>
+                <div class="title">{{ e['detail'] }}</div>
+            </div>
             {% endfor %}
         </div>
-    </div> -->
 
-    <div class="image-container">
-        {% for e in data: %}
-        <div class="panel">
-            <div class="image"><img src={{ url_for('static', filename=e["path"]) }} height="300" alt="" loading="lazy"></div>
-            <div class="title">{{ e['detail'] }}</div>
+        <div class="popup-image" id="modal_bg">
+            <span id="close_button">&times;</span>
+            <img src="" height="500" alt="">
         </div>
-        {% endfor %}
     </div>
 
-    <div class="popup-image">
-        <span>&times;</span>
-        <img src="images/IMG_2993.jpg" height="500" alt="">
-    </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         document.querySelectorAll('.image-container img').forEach(image =>{
             image.onclick = () =>{
@@ -67,12 +72,16 @@
         });
 
         // Xがクリックされたらポップアップが消える処理
-        document.querySelector('.popup-image span').onclick = () => {
-            document.querySelector('.popup-image').style.display = 'none';  
-        }
-        // document.querySelector('.popup-image').onclick() = () => {
-        //     document.querySelector('.popup-image').style.display = 'none';
+        // document.querySelector('.popup-image span').onclick = () => {
+        //     document.querySelector('.popup-image').style.display = 'none';  
         // }
+        
+        var $modals = $('#close_button, #modal_bg');
+        var $popup = $("#modal_bg");
+        ($modals).on('click', () => {
+            $("#modal_bg").css('display','none');
+            console.log ('display');
+        });
     </script>
 
     
