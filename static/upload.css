@@ -1,17 +1,10 @@
 .container {
 	width: 1080%;
-	max-width: 1080px;
+	max-width: 1080%;
 	margin-right: auto;
 	margin-left: auto;
 	background-color:#ffffff
 }
-<<<<<<< HEAD
-.span.navbar-brand  h1{
-	font-family: "ヒラギノ角ゴシック";
-}
-=======
->>>>>>> main
-
 h1 {
 	border-bottom: solid 3px gray;
 	position: relative;
