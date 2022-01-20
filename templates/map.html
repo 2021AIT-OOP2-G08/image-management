@@ -3,11 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>日本各地の画像集</title>
-<link rel="stylesheet" href="map_style.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='map_style.css') }}">
+<link rel="stylesheet"  href={{ url_for('static', filename="font.css") }}>
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
 </head>
 <body>
-    <a href="/upload">アップロード画面へ</a>
+    <header>
+       <h2 class="headline">
+           <a>全体地図</a>
+       </h2>
+       <ul class="nav-list">
+           <li class="nav-list-item">
+               <a href="/upload" class="cp_link">アップロード画面</a>
+           </li>
+       </ul>
+    </header>
 </body>
 <table id="japan-map" class="clearfix">
     <tbody>

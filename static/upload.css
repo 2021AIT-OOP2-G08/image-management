@@ -5,12 +5,14 @@
 	margin-left: auto;
 	background-color:#ffffff
 }
+<<<<<<< HEAD
 .span.navbar-brand  h1{
 	font-family: "ヒラギノ角ゴシック";
 }
+=======
+>>>>>>> main
 
 h1 {
-	font-family: "ヒラギノ角ゴシック";
 	border-bottom: solid 3px gray;
 	position: relative;
 	color: black;
@@ -31,6 +33,7 @@ h1 {
 	padding: 8px 38px 8px 8px;
 	position: sticky
 }
+
 .cp_ipselect {
 	overflow: hidden;
 	width: 90%;
@@ -77,3 +80,46 @@ h1 {
 	padding: 8px 38px 8px 8px;
 	color: black;
 }
+
+* {
+	margin:0; padding:0;
+}
+header {
+	height: 50px;
+	width: 100%;
+	padding: 15px 0;
+	background-color:#76d5f5;
+	color: black;
+  }
+  header .headline{
+	  line-height: 50px;
+	  float: left;
+	  font-size: 30px;
+	  margin-left: 100px;
+  }
+  .nav-list {
+	  line-height: 50px;
+	  float: left;
+	  margin-left: 30px;
+	  list-style: none;
+  }
+  .nav-list-item {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+  }
+
+.cp_link {
+	display: inline-block;
+	padding: 0.1em 0.3em;
+	transition: all .3s;
+	color: white;
+}
+.cp_link:hover {
+	color:black;
+	background-color:#ffffff;
+}
+a{
+	text-decoration: none;
+}
+
