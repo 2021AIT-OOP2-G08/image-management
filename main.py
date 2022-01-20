@@ -46,19 +46,20 @@ def upload():
     
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
-def image():
-    #都道府県名を取得
-    pref = request.args.get("pref",None)
-    #csvから該当の都道府県名を含むデータを取得
-    data = []
-    with open('image.csv') as f:
-        reader = csv.DictReader(f)
-        for r in reader:
-            if(r['prefecture'] == pref):
-                data.append(r)
-    return render_template('imagelist.html',prefecture = pref,data = data)
-    
+def show_imagelist():
+    #urlパラメータの取得
+    prefecture_id = request.args.get('pref',None)
+    #データベースの接続
+    client = MongoClient('localhost', 27017)
+    db = client.oop2
+    #渡すデータの取得
+    prefecture = db.prefectures.find_one({'id':prefecture_id})['ja']
+    data = list(db.imgs.find({'prefecture':prefecture_id}))
+    # 閉じる
+    client.close()
 
+    return render_template('imagelist.html',prefecture = prefecture,data = data)
+    
 if __name__ == "__main__":
     # debugモードが不要の場合は、debug=Trueを消してください
     app.run(debug=True)

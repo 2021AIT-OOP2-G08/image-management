@@ -7,7 +7,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body {
-  font-family: "Helvetica Neue", "Hiragino Sans", "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", sans-serif;
 	font-size: 16px;
 	line-height: 1.5em;
 	color: #000000;
@@ -301,4 +300,45 @@ div.okinawa {
 	top: 197px;
 }
 
+* {
+	margin:0; padding:0;
+}
+header {
+	height: 40px;
+	width: 100%;
+	padding: 15px 0;
+	background-color:#76d5f5;
+	color: black;
+  }
+  header .headline{
+	  line-height: 40px;
+	  float: left;
+	  font-size: 30px;
+	  margin-left: 100px;
+  }
+  .nav-list {
+	  line-height: 40px;
+	  float: left;
+	  margin-left: 30px;
+	  list-style: none;
+  }
+  .nav-list-item {
+	list-style: none;
+	display: inline-block;
+	margin: 0 20px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  }
 
+.cp_link {
+	display: inline-block;
+	padding: 0.1em 0.3em;
+	transition: all .3s;
+	color: white;
+}
+.cp_link:hover {
+	color:black;
+	background-color:#ffffff;
+}
+a{
+	text-decoration: none;
+}

@@ -4,44 +4,86 @@
 <head>
 <meta charset="utf-8" />
 <link rel="stylesheet"  href={{ url_for('static', filename="imagelist.css") }}>
+
+<link rel="stylesheet"  href={{ url_for('static', filename="font.css") }}>
+
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" as="script" crossorigin="anonymous">
+        
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 <title>画像一覧</title>
 </head>
 
 
 <body>
-    <h1 class="title">{{ prefecture }}</h1>
+    <header>
+        <h2 class="headline">
+            {{ prefecture }}
+        </h2>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="/" class="cp_link">全体マップ</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="/upload" class="cp_link">アップロード画面</a>
+            </li>
+        </ul>
+     </header>
 
-    <!--
-    <table>
-        <tr>
-            <th>投稿</th>
-            <th>名前</th>
-        </tr>
+     <div class="container">
+        <!-- <h1>{{ prefecture }}</h1> -->
         
-        {% for e in data: %}
-        <tr>
-            <td><img src={{ e['path'] }} width=600></td>
-            <td><img src={{ e['path'] }} width=600></td>
-            <td>{{ e['locate'] }}</td>
-        </tr>
-        {% endfor %}
-    -->
-    <!--
-        {% for e in data: %}
-        <tr>
-            <td><img src={{ e['path'] }} width=400>aaa</td>
-            <td><img src={{ e['path'] }} width=600>bbb</td>
-            <td><img src={{ e['path'] }} width=500>ccc</td>
-            <td>{{ e['locate'] }}</td>
-        </tr>
-        {% endfor %}
-    -->
-    {% for e in data: %}
-        <div class="pic_frame">
-            <img src={{ url_for('static', filename=e["path"]) }} height=300>
-            <p>{{ e['detail'] }}</p>
+
+        <!-- <div class="container">
+            <div class="row g-3">
+                {% for e in data: %}
+                    <div class="col-12 col-md-6 col-lg-4"></div>
+                        <div class="card">
+                            <img src={{ url_for('static', filename=e["path"]) }} class="card-img-top">
+                            <h5 class="card-title">{{ e['detail'] }}</h5>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div> -->
+
+        <div class="image-container">
+            {% for e in data: %}
+            <div class="panel">
+                <div class="image"><img src={{ url_for('static', filename=e["path"]) }} height="300" alt="" loading="lazy"></div>
+                <div class="title">{{ e['detail'] }}</div>
+            </div>
+            {% endfor %}
         </div>
-    {% endfor %}
-    </table>
+
+        <div class="popup-image" id="modal_bg">
+            <span id="close_button">&times;</span>
+            <img src="" height="500" alt="">
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        // Xがクリックされたらポップアップが消える処理
+        // document.querySelector('.popup-image span').onclick = () => {
+        //     document.querySelector('.popup-image').style.display = 'none';  
+        // }
+        
+        var $modals = $('#close_button, #modal_bg');
+        var $popup = $("#modal_bg");
+        ($modals).on('click', () => {
+            $("#modal_bg").css('display','none');
+            console.log ('display');
+        });
+    </script>
+
+    
 </body>
 </html>
