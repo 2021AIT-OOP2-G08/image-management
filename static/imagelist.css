@@ -21,26 +21,29 @@ h1{
 	margin:0; padding:0;
 }
 header {
-	height: 50px;
+	height: 70px;
 	width: 100%;
 	padding: 15px 0;
 	background-color:#76d5f5;
 	color: black;
 }
 header .headline{
-	  line-height: 50px;
+	  line-height: 40px;
 	  font-size: 30px;
 	  margin-left: 100px;
 }
 .nav-list {
-	  line-height: 50px;
-	  margin-left: 30px;
+	  line-height: 40px;
+	  position:absolute;
+      left: 200px;
+      top: 15px;
 	  list-style: none;
 }
 .nav-list-item {
 	list-style: none;
 	display: inline-block;
 	margin: 0 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
 }
 
 .cp_link {
@@ -48,13 +51,11 @@ header .headline{
 	padding: 0.1em 0.3em;
 	transition: all .3s;
 	color: white;
+    text-decoration: none;
 }
 .cp_link:hover {
 	color:black;
 	background-color:#ffffff;
-}
-a{
-	text-decoration: none;
 }
 
 .image-container{
