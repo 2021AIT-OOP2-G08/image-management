@@ -1,13 +1,10 @@
-.container mt-5{
-	width: 90%;
-	max-width: 680px;
+.container {
+	height: 80%;
+	width: 100%;
 	margin-right: auto;
 	margin-left: auto;
 	background-color:#ffffff
 }
-
-
-
 h1 {
 	border-bottom: solid 3px gray;
 	position: relative;
@@ -16,24 +13,25 @@ h1 {
 
 .name{
 	font-family: "ヒラギノ角ゴシック";	
-	padding: 8px 38px 8px 8px;
+	margin: 10px 50px 20px;
 }
 
 .ditail{
 	font-family: "ヒラギノ角ゴシック";
-	padding: 8px 38px 8px 8px;
+	margin: 10px 50px 20px
 }
 
 .btn_upload{
 	font-family: "ヒラギノ角ゴシック";
 	padding: 8px 38px 8px 8px;
+	position: sticky
 }
 
 .cp_ipselect {
 	overflow: hidden;
 	width: 90%;
-	margin: 2em auto;
 	text-align: center;
+	margin: 10px 50px 20px;
 }
 .cp_ipselect select {
 	width: 100%;
@@ -54,22 +52,21 @@ h1 {
 }
 .cp_ipselect.cp_sl00 {
 	position: relative;
+	border: 1px solid #bbbbbb;
 	border-radius: 2px;
-	border: 2px solid #838383;
-  border-radius: 50px;
 	background: #ffffff;
 }
 .cp_ipselect.cp_sl00::before {
 	position: absolute;
 	top: 0.8em;
-	right: 0.8em;
+	right: 0.9em;
 	width: 0;
 	height: 0;
 	padding: 0;
 	content: '';
 	border-left: 6px solid transparent;
 	border-right: 6px solid transparent;
-	border-top: 6px solid silver;
+	border-top: 6px solid #666666;
 	pointer-events: none;
 }
 .cp_ipselect.cp_sl00 select {
