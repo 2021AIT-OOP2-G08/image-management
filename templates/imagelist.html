@@ -50,7 +50,7 @@
         <div class="image-container">
             {% for e in data: %}
             <div class="panel">
-                <div class="image"><img src={{ url_for('static', filename=e["path"]) }} height="300" alt="" loading="lazy"></div>
+                <div class="image"><img src={{ e["path"] }} height="300" alt="" loading="lazy"></div> 
                 <div class="title">{{ e['detail'] }}</div>
             </div>
             {% endfor %}
