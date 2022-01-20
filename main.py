@@ -1,6 +1,11 @@
+from cv2 import add
 from flask import Flask, request, render_template
 import csv
 from werkzeug.utils import secure_filename
+from pymongo import MongoClient
+from db import DB
+from nanoid import generate
+import os
 
 app = Flask(__name__)
 
@@ -19,38 +24,26 @@ def up_init():
 
 #画像アップロード、csv書き込み
 @app.route('/upload', methods=["POST"])
-def up():
-    
-    #データの登録処理
-    prefecture_name = request.form.get("prefecture",None)
-    image_pass = request.form.get("name",None)
-    detail = request.form.get("detail",None)
-
-    with open('image.csv') as f:
-        csv_data = csv.reader(f)
-        add_data = {"prefecture" : prefecture_name , "image" : image_pass , "detail" : detail}
-        data = []
-        for i in csv_data:
-            data.append(i)
-        data.append(add_data)
-    
-    with open('image.csv',"w") as f:
-        writer = csv.writer(f)
-        writer.writerows(data)
-
-    if 'file' not in request.files:
-        return render_template("upload.html", message="ファイルを指定してください。")
-
+def upload():
     #画像ファイルの受け取り
     fs = request.files['file']
-
     if '' == fs.filename:
         return render_template("upload.html", message="ファイルを指定してください。")
-
+    path, extension = os.path.splitext(fs.filename)
+    filename = generate(size=10)+extension
     #画像を保存
-    fs.save('static/images/' + secure_filename(fs.filename))
+    fs.save('static/images/' + filename)
+    item = {
+        'prefecture': request.form.get("prefecture",None),
+        'name': request.form.get("name",None),
+        'detail': request.form.get("detail",None),
+        'path' : "static/images/" + filename
+    }
+    db = DB()
+    db.add_one(item)
     return render_template('upload.html', message='アップロードに成功しました。')
-  
+
+    
 #画像表示、画像リスト表示
 @app.route('/view', methods=["GET"])
 def image():
