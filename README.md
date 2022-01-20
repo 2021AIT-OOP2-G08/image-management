@@ -42,6 +42,11 @@
 $ brew tap mongodb/brew
 $ brew install mongodb-community
 ```
+- pymongo
+###導入方法
+```
+$ pip install pymongo
+```
 
 ## Usage
 ### Webインターフェイスの起動
