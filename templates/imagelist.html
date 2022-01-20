@@ -36,11 +36,12 @@
         {% endfor %}
     </div>
 
-    <div class="popup-image">
-        <span>&times;</span>
-        <img src="images/IMG_2993.jpg" height="500" alt="">
+    <div class="popup-image" id="modal_bg">
+        <span id="close_button">&times;</span>
+        <img src="" height="500" alt="">
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         document.querySelectorAll('.image-container img').forEach(image =>{
             image.onclick = () =>{
@@ -50,12 +51,16 @@
         });
 
         // Xがクリックされたらポップアップが消える処理
-        document.querySelector('.popup-image span').onclick = () => {
-            document.querySelector('.popup-image').style.display = 'none';  
-        }
-        // document.querySelector('.popup-image').onclick() = () => {
-        //     document.querySelector('.popup-image').style.display = 'none';
+        // document.querySelector('.popup-image span').onclick = () => {
+        //     document.querySelector('.popup-image').style.display = 'none';  
         // }
+        
+        var $modals = $('#close_button, #modal_bg');
+        var $popup = $("#modal_bg");
+        ($modals).on('click', () => {
+            $("#modal_bg").css('display','none');
+            console.log ('display');
+        });
     </script>
 
     
