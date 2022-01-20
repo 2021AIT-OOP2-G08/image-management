@@ -1,167 +1,434 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>日本各地の画像集</title>
-<link rel="stylesheet" href="map_style.css">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
-</head>
-<body>
-    <a href="/upload">アップロード画面へ</a>
-</body>
-<table id="japan-map" class="clearfix">
-    <tbody>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="hokkaido" colspan="2" rowspan="2"><div class="hokkaido"><a href="/view?pref=北海道">北海道</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="tohoku" colspan="2"><div class="aomori"><a href="/view?pref=青森">青森</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="tohoku"><div class="akita"><a href="/view?pref=秋田">秋田</a></td>
-    <td class="tohoku"><div class="iwate"><a href="/view?pref=岩手">岩手</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="tohoku"><div class="yamagata"><a href="/view?pref=山形">山形</a></td>
-    <td class="tohoku"><div class="miyagi"><a href="/view?pref=宮城">宮城</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="chubu"><div class="isikawa"><a href="/view?pref=石川">石川</a></td>
-    <td class="chubu"><div class="toyama"><a href="/view?pref=富山">富山</a></td>
-    <td class="chubu"><div class="niigata"><a href="/view?pref=新潟">新潟</a></td>
-    <td class="tohoku" colspan="2"><div class="hukusima"><a href="/view?pref=福島">福島</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="chubu"><div class="hukui"><a href="/view?pref=福井">福井</a></td>
-    <td class="chubu" rowspan="2"><div class="gifu"><a href="/view?pref=岐阜">岐阜</a></td>
-    <td class="chubu" rowspan="2"><div class="nagano"><a href="/view?pref=長野">長野</a></td>
-    <td class="kanto"><div class="gunma"><a href="/view?pref=群馬">群馬</a></td>
-    <td class="kanto"><div class="totigi"><a href="/view?pref=栃木">栃木</a></td>
-    </tr>
-    <tr>
-    <td class="kyushu"><div class="saga"><a href="/view?pref=佐賀">佐賀</a></td>
-    <td class="kyushu"><div class="hukuoka"><a href="/view?pref=福岡">福岡</a></td>
-    <td class="kyushu"><div class="ooita"><a href="/view?pref=大分">大分</a></td>
-    <td class="chugoku" rowspan="2"><div class="yamaguti"><a href="/view?pref=山口">山口</a></td>
-    <td class="chugoku"><div class="simane"><a href="/view?pref=島根">島根</a></td>
-    <td class="chugoku"><div class="tottori"><a href="/view?pref=鳥取">鳥取</a></td>
-    <td class="kinki"><div class="hyougo"><a href="/view?pref=兵庫">兵庫</a></td>
-    <td class="kinki"><div class="kyouto"><a href="/view?pref=京都">京都</a></td>
-    <td class="kinki"><div class="siga"><a href="/view?pref=滋賀">滋賀</a></td>
-    <td class="kanto"><div class="saitama"><a href="/view?pref=埼玉">埼玉</a></td>
-    <td class="kanto"><div class="ibaraki"><a href="/view?pref=茨城">茨城</a></td>
-    </tr>
-    <tr>
-    <td class="kyushu"><div class="nagasaki"><a href="/view?pref=長崎">長崎</a></td>
-    <td class="kyushu" rowspan="2"><div class="kumamoto"><a href="/view?pref=熊本">熊本</a></td>
-    <td class="kyushu" rowspan="2"><div class="miyazaki"><a href="/view?pref=宮崎">宮崎</a></td>
-    <td class="chugoku"><div class="hirosima"><a href="/view?pref=広島">広島</a></td>
-    <td class="chugoku"><div class="okayama"><a href="/view?pref=岡山">岡山</a></td>
-    <td class="kinki"><div class="oosaka"><a href="/view?pref=大阪">大阪</a></td>
-    <td class="kinki"><div class="nara"><a href="/view?pref=奈良">奈良</a></td>
-    <td class="kinki"><div class="mie"><a href="/view?pref=三重">三重</a></td>
-    <td class="chubu"><div class="aiti"><a href="/view?pref=愛知">愛知</a></td>
-    <td class="chubu"><div class="yamanasi"><a href="/view?pref=山梨">山梨</a></td>
-    <td class="kanto"><div class="toukyou"><a href="/view?pref=東京">東京</a></td>
-    <td class="kanto" rowspan="2"><div class="tiba"><a href="/view?pref=千葉">千葉</a></td>
-    </tr>
-    <tr>
-    <td></td>
-    <td class="shikoku"><div class="ehime"><a href="/view?pref=愛媛">愛媛</a></td>
-    <td class="shikoku"><div class="kagawa"><a href="/view?pref=香川">香川</a></td>
-    <td></td>
-    <td class="kinki" colspan="2"><div class="wakayama"><a href="/view?pref=和歌山">和歌山</a></td>
-    <td></td>
-    <td></td>
-    <td class="chubu"><div class="sizuoka"><a href="/view?pref=静岡">静岡</a></td>
-    <td class="kanto"><div class="kanagawa"><a href="/view?pref=神奈川">神奈川</a></td>
-    </tr>
-    <tr>
-    <td class="okinawa"><div class="okinawa"><a href="/view?pref=沖縄">沖縄</a></td>
-    <td class="kyushu" colspan="2"><div class="kagosima"><a href="/view?pref=鹿児島">鹿児島</a></td>
-    <td class="shikoku"><div class="kouti"><a href="/view?pref=高知">高知</a></td>
-    <td class="shikoku"><div class="tokusima"><a href="/view?pref=徳島">徳島</a></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-    </tbody>
-    </table>
+    <head>
+        <meta charset="UTF-8">
+        <title>日本各地の画像集</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+        <!-- leaflet.js -->
+        <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+
+        <script src="js/leaflet.sprite.js"></script>
+
+        <link rel="stylesheet" href="map_style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+    </head>
+    <body>
+        <h1>日本地図</h1>
+        <a href="/upload">アップロード画面へ</a>
+        <div id="mymap" style="width:80vw;height:50vw;"></div>
+
+        <script>
+          /* 緯度・経度と倍率の指定 */
+          var points = new Array();
+          var mymap = L.map("mymap").setView([35.68944,139.69167], 6);
+          /* 地図タイルとクレジット表示 */
+          L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+            attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
+            }).addTo(mymap);
+            Markers();
+      
+          /* マーカー表示 */
+          
+          function Markers()       // マーカー設置
+          {
+              var Marker_shape = new Array();
+              var Marker_pos = new Array();
+              var Marker_name = new Array();
+              var Marker_lnk = new Array();
+              var Marker_set = new Array();
+      
+              Marker_pos[0] = [35.68109, 139.76717];
+              Marker_name[0] = "東京都";
+              Marker_lnk[0] = "<a href= '/東京'>東京の画像へ移動</a>";
+              Marker_set[0] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [1] = [43.06417,141.34694];
+              Marker_name[1] = "北海道";
+              Marker_lnk [1] = "<a href= '/北海道'>北海道の画像へ移動</a>";
+              Marker_set [1] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [2] = [40.82444,140.74];
+              Marker_name[2] = "青森県";
+              Marker_lnk [2] = "<a href= '/青森'>青森県の画像へ移動</a>";
+              Marker_set [2] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [3] = [39.70361,141.1525];
+              Marker_name[3] = "岩手県";
+              Marker_lnk [3] = "<a href= '/岩手'>岩手県の画像へ移動</a>";
+              Marker_set [3] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [4] = [38.26889,140.87194];
+              Marker_name[4] = "宮城県";
+              Marker_lnk [4] = "<a href= '/宮城'>宮城県の画像へ移動</a>";
+              Marker_set [4] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [5] = [39.71861,140.1025];
+              Marker_name[5] = "秋田県";
+              Marker_lnk [5] = "<a href= '/秋田'>秋田県の画像へ移動</a>";
+              Marker_set [5] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [6] = [38.24056,140.36333];
+              Marker_name[6] = "山形県";
+              Marker_lnk [6] = "<a href= '/山形'>山形県の画像へ移動</a>";
+              Marker_set [6] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [7] = [37.75,140.46778];
+              Marker_name[7] = "福島県";
+              Marker_lnk [7] = "<a href= '/福島'>福島県の画像へ移動</a>";
+              Marker_set [7] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [8] = [36.34139,140.44667];
+              Marker_name[8] = "茨城県";
+              Marker_lnk [8] = "<a href= '/茨城'>茨城県の画像へ移動</a>";
+              Marker_set [8] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [9] = [36.56583,139.88361];
+              Marker_name[9] = "栃木県";
+              Marker_lnk [9] = "<a href= '/栃木'>栃木県の画像へ移動</a>";
+              Marker_set [9] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [10] = [36.39111,139.06083];
+              Marker_name[10] = "群馬県";
+              Marker_lnk [10] = "<a href= '/群馬'>群馬県の画像へ移動</a>";
+              Marker_set [10] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [11] = [35.85694,139.64889];
+              Marker_name[11] = "埼玉県";
+              Marker_lnk [11] = "<a href= '/埼玉'>埼玉県の画像へ移動</a>";
+              Marker_set [11] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [12] = [35.60472,140.12333];
+              Marker_name[12] = "千葉県";
+              Marker_lnk [12] = "<a href= '/千葉'>千葉県の画像へ移動</a>";
+              Marker_set [12] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [13] = [35.68944,139.69167];
+              Marker_name[13] = "東京県";
+              Marker_lnk [13] = "<a href= '/東京'>東京県の画像へ移動</a>";
+              Marker_set [13] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [14] = [35.44778,139.6425];
+              Marker_name[14] = "神奈川県";
+              Marker_lnk [14] = "<a href= '/神奈川'>神奈川県の画像へ移動</a>";
+              Marker_set [14] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [15] = [37.90222,139.02361];
+              Marker_name[15] = "新潟県";
+              Marker_lnk [15] = "<a href= '/新潟'>新潟県の画像へ移動</a>";
+              Marker_set [15] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [16] = [36.69528,137.21139];
+              Marker_name[16] = "富山県";
+              Marker_lnk [16] = "<a href= '/富山'>富山県の画像へ移動</a>";
+              Marker_set [16] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [17] = [36.59444,136.62556];
+              Marker_name[17] = "石川県";
+              Marker_lnk [17] = "<a href= '/石川'>石川県の画像へ移動</a>";
+              Marker_set [17] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [18] = [36.06528,136.22194];
+              Marker_name[18] = "福井県";
+              Marker_lnk [18] = "<a href= '/福井'>福井県の画像へ移動</a>";
+              Marker_set [18] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [19] = [35.66389,138.56833];
+              Marker_name[19] = "山梨県";
+              Marker_lnk [19] = "<a href= '/山梨'>山梨県の画像へ移動</a>";
+              Marker_set [19] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [20] = [36.65139,138.18111];
+              Marker_name[20] = "長野県";
+              Marker_lnk [20] = "<a href= '/長野'>長野県の画像へ移動</a>";
+              Marker_set [20] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [21] = [35.39111,136.72222];
+              Marker_name[21] = "岐阜県";
+              Marker_lnk [21] = "<a href= '/岐阜'>岐阜県の画像へ移動</a>";
+              Marker_set [21] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [22] = [34.97694,138.38306];
+              Marker_name[22] = "静岡県";
+              Marker_lnk [22] = "<a href= '/静岡'>静岡県の画像へ移動</a>";
+              Marker_set [22] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [23] = [35.18028,136.90667];
+              Marker_name[23] = "愛知県";
+              Marker_lnk [23] = "<a href= '/愛知'>愛知県の画像へ移動</a>";
+              Marker_set [23] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [24] = [34.73028,136.50861];
+              Marker_name[24] = "三重県";
+              Marker_lnk [24] = "<a href= '/三重'>三重県の画像へ移動</a>";
+              Marker_set [24] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [25] = [35.00444,135.86833];
+              Marker_name[25] = "滋賀県";
+              Marker_lnk [25] = "<a href= '/滋賀'>滋賀県の画像へ移動</a>";
+              Marker_set [25] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [26] = [35.02139,135.75556];
+              Marker_name[26] = "京都府";
+              Marker_lnk [26] = "<a href= '/京都'>京都府の画像へ移動</a>";
+              Marker_set [26] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [27] = [34.68639,135.52];
+              Marker_name[27] = "大阪府";
+              Marker_lnk [27] = "<a href= '/大阪'>大阪府の画像へ移動</a>";
+              Marker_set [27] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [28] = [34.69139,135.18306];
+              Marker_name[28] = "兵庫県";
+              Marker_lnk [28] = "<a href= '/兵庫'>兵庫県の画像へ移動</a>";
+              Marker_set [28] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [29] = [34.68528,135.83278];
+              Marker_name[29] = "奈良県";
+              Marker_lnk [29] = "<a href= '/奈良'>奈良県の画像へ移動</a>";
+              Marker_set [29] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [30] = [34.22611,135.1675];
+              Marker_name[30] = "和歌山県";
+              Marker_lnk [30] = "<a href= '/和歌山'>和歌山県の画像へ移動</a>";
+              Marker_set [30] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [31] = [35.50361,134.23833];
+              Marker_name[31] = "鳥取県";
+              Marker_lnk [31] = "<a href= '/鳥取'>鳥取県の画像へ移動</a>";
+              Marker_set [31] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [32] = [35.47222,133.05056];
+              Marker_name[32] = "島根県";
+              Marker_lnk [32] = "<a href= '/島根'>島根県の画像へ移動</a>";
+              Marker_set [32] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [33] = [34.66167,133.935];
+              Marker_name[33] = "岡山県";
+              Marker_lnk [33] = "<a href= '/岡山'>岡山県の画像へ移動</a>";
+              Marker_set [33] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [34] = [34.39639,132.45944];
+              Marker_name[34] = "広島県";
+              Marker_lnk [34] = "<a href= '/広島'>広島県の画像へ移動</a>";
+              Marker_set [34] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [35] = [34.18583,131.47139];
+              Marker_name[35] = "山口県";
+              Marker_lnk [35] = "<a href= '/山口'>山口県の画像へ移動</a>";
+              Marker_set [35] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+              
+              Marker_pos [36] = [34.06583,134.55944];
+              Marker_name[36] = "徳島県";
+              Marker_lnk [36] = "<a href= '/徳島'>徳島県の画像へ移動</a>";
+              Marker_set [36] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [37] = [34.34028,134.04333];
+              Marker_name[37] = "香川県";
+              Marker_lnk [37] = "<a href= '/香川'>香川県の画像へ移動</a>";
+              Marker_set [37] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [38] = [33.84167,132.76611];
+              Marker_name[38] = "愛媛県";
+              Marker_lnk [38] = "<a href= '/愛媛'>愛媛県の画像へ移動</a>";
+              Marker_set [38] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [39] = [33.55972,133.53111];
+              Marker_name[39] = "高知県";
+              Marker_lnk [39] = "<a href= '/高知'>高知県の画像へ移動</a>";
+              Marker_set [39] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+              
+              Marker_pos [40] = [33.60639,130.41806];
+              Marker_name[40] = "福岡県";
+              Marker_lnk [40] = "<a href= '/福岡'>福岡県の画像へ移動</a>";
+              Marker_set [40] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [41] = [33.24944,130.29889];
+              Marker_name[41] = "佐賀県";
+              Marker_lnk [41] = "<a href= '/佐賀'>佐賀県の画像へ移動</a>";
+              Marker_set [41] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [42] = [32.74472,129.87361];
+              Marker_name[42] = "長崎県";
+              Marker_lnk [42] = "<a href= '/長崎'>長崎県の画像へ移動</a>";
+              Marker_set [42] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [43] = [32.78972,130.74167];
+              Marker_name[43] = "熊本県";
+              Marker_lnk [43] = "<a href= '/熊本'>熊本県の画像へ移動</a>";
+              Marker_set [43] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [44] = [33.23806,131.6125];
+              Marker_name[44] = "大分県";
+              Marker_lnk [44] = "<a href= '/大分'>大分県の画像へ移動</a>";
+              Marker_set [44] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [45] = [31.91111,131.42389];
+              Marker_name[45] = "宮崎県";
+              Marker_lnk [45] = "<a href= '/宮崎'>宮崎県の画像へ移動</a>";
+              Marker_set [45] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [46] = [31.56028,130.55806];
+              Marker_name[46] = "鹿児島県";
+              Marker_lnk [46] = "<a href= '/鹿児島'>鹿児島県の画像へ移動</a>";
+              Marker_set [46] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              Marker_pos [47] = [26.2125,127.68111];
+              Marker_name[47] = "沖縄県";
+              Marker_lnk [47] = "<a href= '/沖縄'>沖縄県の画像へ移動</a>";
+              Marker_set [47] = L.icon({
+                  iconUrl : 'https://www.pref.hokkaido.lg.jp/fs/2/3/5/4/1/2/8/_/symbol.dosyo.gif',
+                  iconSize: [24, 20],
+              });
+      
+              for(i=1;i<=47;i++){
+                  Marker_shape[i] = L.marker([Marker_pos[i][0], Marker_pos[i][1]],{icon:Marker_set[i]});
+                  Marker_shape[i].bindPopup(Marker_name[i] + "<br>" + Marker_lnk[i]).openPopup();
+                  points[i] = Marker_shape[i];
+                  points[i].addTo(mymap);
+              }
+          }
+      
+        </script>
+    </body>
+</html>
