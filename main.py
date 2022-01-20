@@ -1,4 +1,3 @@
-from os import read
 from flask import Flask, request, render_template
 import csv
 from werkzeug.utils import secure_filename
@@ -10,12 +9,16 @@ app = Flask(__name__)
 def Home():
     return render_template('map.html')
 
+#アップロード画面
+@app.route('/upload', methods=["GET"])
+def up_init():
+    return render_template('upload.html')
 
 #　都道府県名を取得したい場合
 #  変数名 = request.args.get("pref", None)
 
 #画像アップロード、csv書き込み
-@app.route('/upload', methods=["GET","POST"])
+@app.route('/upload', methods=["POST"])
 def up():
     
     #データの登録処理
@@ -46,7 +49,6 @@ def up():
 
     #画像を保存
     fs.save('static/images/' + secure_filename(fs.filename))
-        
     return render_template('upload.html', message='アップロードに成功しました。')
   
 #画像表示、画像リスト表示
