@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='upload.css') }}">
+    <link rel="stylesheet"  href={{ url_for('static', filename="font.css") }}>
     <title>ファイルアップロード</title>
 </head>
 <body>
+    <header>
+        <h2 class="headline">
+            <a>アップロード画面</a>
+        </h2>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="/" class="cp_link">全体マップ</a>
+            </li>
+        </ul>
+     </header>
     <div class="container mt-5">
         <h1>画像を選択してください</h1>
         <form enctype="multipart/form-data" action="/upload" method="post">

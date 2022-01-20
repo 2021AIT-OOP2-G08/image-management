@@ -4,12 +4,26 @@
 <head>
 <meta charset="utf-8" />
 <link rel="stylesheet"  href={{ url_for('static', filename="imagelist.css") }}>
+<link rel="stylesheet"  href={{ url_for('static', filename="font.css") }}>
 <title>画像一覧</title>
 </head>
 
 
 <body>
-    <h1 class="title">{{ prefecture }}</h1>
+    <header>
+        <h2 class="headline">
+            {{ prefecture }}
+        </h2>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="/" class="cp_link">全体マップ</a>
+            </li>
+            <li class="nav-list-item">
+                <a href="/upload" class="cp_link">アップロード画面</a>
+            </li>
+        </ul>
+     </header>
+    
 
     <!--
     <table>
