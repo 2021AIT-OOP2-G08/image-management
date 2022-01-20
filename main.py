@@ -50,15 +50,12 @@ def show_imagelist():
     #urlパラメータの取得
     prefecture_id = request.args.get('pref',None)
     #データベースの接続
-    client = MongoClient('localhost', 27017)
-    db = client.oop2
+    db = DB()
     #渡すデータの取得
-    prefecture = db.prefectures.find_one({'id':prefecture_id})['ja']
-    data = list(db.imgs.find({'prefecture':prefecture_id}))
-    # 閉じる
-    client.close()
+    data = db.get_filteredCollection('imgs',{'prefecture':prefecture_id})
+    prefecture = db.get_document_one('prefectures',{'id':prefecture_id})
 
-    return render_template('imagelist.html',prefecture = prefecture,data = data)
+    return render_template('imagelist.html',prefecture = prefecture['ja'] ,data = data)
     
 if __name__ == "__main__":
     # debugモードが不要の場合は、debug=Trueを消してください

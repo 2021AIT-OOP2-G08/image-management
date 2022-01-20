@@ -8,14 +8,8 @@ class DB():
     def add_one(self,item):
         return self.db.imgs.insert_one(item)
 
-    def get(self):
-        return self.db.prefectures.find_one()
+    def get_filteredCollection(self,collection_name,condition):
+        return list(self.db[collection_name].find(condition))
 
-
-def main():
-    db = DB()
-    print(db.get())
-    
-
-if __name__ == '__main__':
-    main()
+    def get_document_one(self,collection_name,condition):
+        return self.db[collection_name].find_one(condition)
