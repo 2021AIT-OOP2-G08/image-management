@@ -3,85 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" as="script" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='upload.css') }}">
+    <link rel="stylesheet"  href={{ url_for('static', filename="font.css") }}>
     <title>ファイルアップロード</title>
 </head>
 <body>
+    <header>
+        <h2 class="headline">
+            <a>アップロード画面</a>
+        </h2>
+        <ul class="nav-list">
+            <li class="nav-list-item">
+                <a href="/" class="cp_link">全体マップ</a>
+            </li>
+        </ul>
+     </header>
     <div class="container mt-5">
         <h1>画像を選択してください</h1>
         <form enctype="multipart/form-data" action="/upload" method="post">
-            <div class="input-group">
+            <div class="input-group mb-3">
                 <input class="form-control form-control-lg" type="file" name="file">
-                <p class = "image_name">画像の名前:「必須」<br>
-                    <input type="text" name="name"></p>
-                
-                <p class = "image_auto">画像の詳細:「任意」<br>
-                    <input type="text" name="ditail"></p>
-        
-                    <div class="cp_ipselect cp_sl00">
-                        <select name = "prefecture">
-                            <option value="0" hidden>都道府県</option>
-                            <option value="北海道">北海道</option>
-                            <option value="青森">青森</option>
-                            <option value="岩手">岩手</option>
-                            <option value="宮崎">宮崎</option>
-                            <option value="秋田">秋田</option>
-                            <option value="山形">山形</option>
-                            <option value="福島">福島</option>
-                            <option value="茨城">茨城</option>
-                            <option value="栃木">栃木</option>
-                            <option value="群馬">群馬</option>
-                            <option value="埼玉">埼玉</option>
-                            <option value="千葉">千葉</option>
-                            <option value="東京">東京</option>
-                            <option value="神奈川">神奈川</option>
-                            <option value="新潟">新潟</option>
-                            <option value="富山">富山</option>
-                            <option value="石川">石川</option>
-                            <option value="福井">福井</option>
-                            <option value="山梨">山梨</option>
-                            <option value="長野">長野</option>
-                            <option value="岐阜">岐阜</option>
-                            <option value="静岡">静岡</option>
-                            <option value="愛知">愛知</option>
-                            <option value="三重">三重</option>
-                            <option value="滋賀">滋賀</option>
-                            <option value="京都">京都</option>
-                            <option value="大阪">大阪</option>
-                            <option value="兵庫">兵庫</option>
-                            <option value="奈良">奈良</option>
-                            <option value="和歌山">和歌山</option>
-                            <option value="鳥取">鳥取</option>
-                            <option value="島根">島根</option>
-                            <option value="福岡">福岡</option>
-                            <option value="広島">広島</option>
-                            <option value="山口">山口</option>
-                            <option value="徳島">徳島</option>
-                            <option value="香川">香川</option>
-                            <option value="愛媛">愛媛</option>
-                            <option value="高知">高知</option>
-                            <option value="福岡">福岡</option>
-                            <option value="佐賀">佐賀</option>
-                            <option value="長崎">長崎</option>
-                            <option value="熊本">熊本</option>
-                            <option value="大分">大分</option>
-                            <option value="宮崎">宮崎</option>
-                            <option value="鹿児島">鹿児島</option>
-                            <option value="沖縄">沖縄</option>
-                        </select>
-                        </div>
-                    <button type="submit" class="btn btn-primary">アップロード</button>
-
-                    <nav class = "navbar navber-light bg-light">
-                        <div class = "container">
-                            <span class = "navbar-brand mb-0 h1">アップロード画面</span>
-                            <!--<ul calss = "nav">-->
-                             <a href="/">地図選択へ</a>
-                            <!--</ul>-->
-                        </div>
-                    </nav>
             </div>
-            
+
+            <div class="name bg-light mb-3">
+                <label for="exampleFormControlInput1" class="form-label">画像の名前:「必須」</label>
+                <input type="text" class="form-control"　name="name" placeholder="富士山">
+            </div>  
+                
+            <div class="ditail bg-light mb-3">
+                <label for="exampleFormControlInput1" class="form-label">画像の詳細:「任意」</label>
+                <input type="text" class="form-control"　name="ditail" placeholder="山">
+            </div>            
+        
+            <div class="cp_ipselect cp_sl00">
+                <select name = "prefecture">
+                    <option value="0" hidden>都道府県</option>
+                    <option value="北海道">北海道</option>
+                    <option value="青森">青森</option>
+                    <option value="岩手">岩手</option>
+                    <option value="宮崎">宮崎</option>
+                    <option value="秋田">秋田</option>
+                    <option value="山形">山形</option>
+                    <option value="福島">福島</option>
+                    <option value="茨城">茨城</option>
+                    <option value="栃木">栃木</option>
+                    <option value="群馬">群馬</option>
+                    <option value="埼玉">埼玉</option>
+                    <option value="千葉">千葉</option>
+                    <option value="東京">東京</option>
+                    <option value="神奈川">神奈川</option>
+                    <option value="新潟">新潟</option>
+                    <option value="富山">富山</option>
+                    <option value="石川">石川</option>
+                    <option value="福井">福井</option>
+                    <option value="山梨">山梨</option>
+                    <option value="長野">長野</option>
+                    <option value="岐阜">岐阜</option>
+                    <option value="静岡">静岡</option>
+                    <option value="愛知">愛知</option>
+                    <option value="三重">三重</option>
+                    <option value="滋賀">滋賀</option>
+                    <option value="京都">京都</option>
+                    <option value="大阪">大阪</option>
+                    <option value="兵庫">兵庫</option>
+                    <option value="奈良">奈良</option>
+                    <option value="和歌山">和歌山</option>
+                    <option value="鳥取">鳥取</option>
+                    <option value="島根">島根</option>
+                    <option value="福岡">福岡</option>
+                    <option value="広島">広島</option>
+                    <option value="山口">山口</option>
+                    <option value="徳島">徳島</option>
+                    <option value="香川">香川</option>
+                    <option value="愛媛">愛媛</option>
+                    <option value="高知">高知</option>
+                    <option value="福岡">福岡</option>
+                    <option value="佐賀">佐賀</option>
+                    <option value="長崎">長崎</option>
+                    <option value="熊本">熊本</option>
+                    <option value="大分">大分</option>
+                    <option value="宮崎">宮崎</option>
+                    <option value="鹿児島">鹿児島</option>
+                    <option value="沖縄">沖縄</option>
+                </select>
+            </div>             
+            <div class="btn_upload mb-3">
+                <button type="submit" class="btn btn-primary" name="btn_upload">アップロード</button>
+            </div>
+                <nav class = "navbar navber-light bg-light">
+                    <div class = "container">
+                        <span class = "navbar-brand mb-0 h1">アップロード画面</span>
+                        <!--<ul calss = "nav">-->
+                            <a href="/">地図選択へ</a>
+                        <!--</ul>-->
+                    </div>
+                </nav>
         </form>        
         {% if message %}
         <div class="alert alert-success" role="alert">
