@@ -32,15 +32,27 @@
 |:-----------|------------:|
 | Python     | 3.9.7       |
 | Flask      | 2.0.2       |
+| MongoDB    | 5.0.5       |
 
 - html/css
 - javascript
+- mongodb
+### 導入方法
+```
+$ brew tap mongodb/brew
+$ brew install mongodb-community
+```
 
 ## Usage
 ### Webインターフェイスの起動
 
 ```
 $ python main.py
+```
+
+### MongoDBの起動
+```
+$ brew services start mongodb-community
 ```
 
 ## 仕様ライブラリ

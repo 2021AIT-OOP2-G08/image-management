@@ -1,17 +1,34 @@
 .container mt-5{
 	width: 90%;
-	max-width: 1040px;
+	max-width: 680px;
 	margin-right: auto;
 	margin-left: auto;
 	background-color:#ffffff
 }
+
+
 
 h1 {
 	border-bottom: solid 3px gray;
 	position: relative;
 	color: black;
   }
-  
+
+.name{
+	font-family: "ヒラギノ角ゴシック";	
+	padding: 8px 38px 8px 8px;
+}
+
+.ditail{
+	font-family: "ヒラギノ角ゴシック";
+	padding: 8px 38px 8px 8px;
+}
+
+.btn_upload{
+	font-family: "ヒラギノ角ゴシック";
+	padding: 8px 38px 8px 8px;
+}
+
 .cp_ipselect {
 	overflow: hidden;
 	width: 90%;
