@@ -14,7 +14,7 @@
 <body>
     <h1 class="title">{{ prefecture }}</h1>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="row g-3">
             {% for e in data: %}
                 <div class="col-12 col-md-6 col-lg-4"></div>
@@ -24,35 +24,40 @@
                     </div>
                 </div>
             {% endfor %}
-
-            <!-- <div class="col-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="images/IMG_2978.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">小便小僧</h5>
-                    </div>
-                </div>
-            </div> -->
-            <!--
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="./images/IMG_2992.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">軸サー1</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card">
-                    <img src="./images/IMG_2993.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">軸サー2</h5>
-                    </div>
-                </div>
-            </div> -->
         </div>
+    </div> -->
+
+    <div class="image-container">
+        {% for e in data: %}
+        <div class="panel">
+            <div class="image"><img src={{ url_for('static', filename=e["path"]) }} height="300" alt=""></div>
+            <div class="title">myバイク</div>
+        </div>
+        {% endfor %}
     </div>
 
-    </table>
+    <div class="popup-image">
+        <span>&times;</span>
+        <img src="images/IMG_2993.jpg" height="500" alt="">
+    </div>
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image =>{
+            image.onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        // Xがクリックされたらポップアップが消える処理
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';  
+        }
+        // document.querySelector('.popup-image').onclick() = () => {
+        //     document.querySelector('.popup-image').style.display = 'none';
+        // }
+    </script>
+
+    
 </body>
 </html>
