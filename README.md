@@ -50,6 +50,12 @@ $ brew install mongodb-community
 $ python main.py
 ```
 
+### MongoDBの起動
+```
+$ brew services start mongodb-community
+$ mongo //ローカルのMongoDBへの接続
+```
+
 ## 仕様ライブラリ
 
 - Maps JavaScript API
