@@ -43,9 +43,14 @@ $ brew tap mongodb/brew
 $ brew install mongodb-community
 ```
 - pymongo
-###導入方法
+### 導入方法
 ```
 $ pip install pymongo
+```
+- nanoid
+### 導入方法
+```
+$ pip install nanoid
 ```
 
 ## Usage
