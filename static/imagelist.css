@@ -4,7 +4,10 @@ body{
     background-color: #fff;
 }
 
-
+header h2{
+  color: rgba(0,0,0,0.9);
+  letter-spacing: 7px;
+}
 
 
 
@@ -75,14 +78,38 @@ header .headline{
     /* padding-bottom: 30px; */
 }
 
-.image-container .panel .title{
-    font-size: 18px;
-    font-weight: 600;
-    text-align: top;
-    padding: 0;
-    color: rgba(0,0,0,0.7);
-    text-align: center;
-    text-transform: capitalize;
+.image-container .panel .panel-text{
+  display: flex;
+  justify-content: center;
+}
+
+.image-container .panel .panel-text .title{
+  /* display: flex; */
+  padding: auto;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: top;
+  padding: 0;
+  margin: 0;
+  color: rgba(0,0,0,0.7);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.image-container .panel .panel-text .detail{
+  font-size: 13px;
+  font-weight: normal;
+  text-align: top;
+  padding-left: 20px;
+  margin-left: 20px;
+  color: rgba(0,0,0,0.5);
+  text-align: right;
+  text-transform: capitalize;
+  padding-top: 5px;
+  margin: 0px;
+  vertical-align: middle;
+  
+
 }
 
 .image-container .panel .image{
