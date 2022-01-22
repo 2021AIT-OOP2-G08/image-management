@@ -70,20 +70,15 @@ header .headline{
 }
 
 .image-container .panel{
-    background-color: #fff;
-    height: 282px;
-    border:1px solid rgba(0,0,0,0.1);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    /* padding-bottom: 30px; */
+  background-color: #fff;
+  height: 300px;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  /* padding-bottom: 30px; */
 }
 
-.image-container .panel .panel-text{
-  display: flex;
-  justify-content: center;
-}
-
-.image-container .panel .panel-text .title{
+.image-container .panel .title{
   /* display: flex; */
   padding: auto;
   font-size: 18px;
@@ -96,18 +91,18 @@ header .headline{
   text-transform: capitalize;
 }
 
-.image-container .panel .panel-text .detail{
-  font-size: 13px;
+.image-container .panel .detail{
+  font-size: 12px;
   font-weight: normal;
   text-align: top;
-  padding-left: 20px;
-  margin-left: 20px;
+  /* padding-left: 20px;
+  margin-left: 20px; */
   color: rgba(0,0,0,0.5);
-  text-align: right;
+  text-align: center;
   text-transform: capitalize;
-  padding-top: 5px;
+  /* padding-top: 5px; */
   margin: 0px;
-  vertical-align: middle;
+  vertical-align: top;
   
 
 }
