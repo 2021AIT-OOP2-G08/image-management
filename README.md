@@ -37,37 +37,36 @@
 - html/css
 - javascript
 - mongodb
-### 導入方法
 ```
 $ brew tap mongodb/brew
 $ brew install mongodb-community
 ```
 - pymongo
-### 導入方法
 ```
 $ pip install pymongo
 ```
 - nanoid
-### 導入方法
 ```
 $ pip install nanoid
 ```
 
 ## Usage
-### Webインターフェイスの起動
-
+### MongoDBの起動/Webインターフェイスの起動
+起動する際毎回実行してください
 ```
+$ brew services start mongodb-community
 $ python main.py
 ```
 
-### MongoDBの起動
+### MongoDBのリストア
+ローカルリポジトリの階層で１度だけ実行してください
 ```
-$ brew services start mongodb-community
+$ mongorestore --port 27017 --dir ./dump
 ```
 
 ## 仕様ライブラリ
 
-- Maps JavaScript API
+- Open Street Map
 
 ## 仕様
 
