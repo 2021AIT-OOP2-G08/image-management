@@ -4,7 +4,10 @@ body{
     background-color: #fff;
 }
 
-
+header h2{
+  color: rgba(0,0,0,0.9);
+  letter-spacing: 7px;
+}
 
 
 
@@ -67,22 +70,41 @@ header .headline{
 }
 
 .image-container .panel{
-    background-color: #fff;
-    height: 282px;
-    border:1px solid rgba(0,0,0,0.1);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    /* padding-bottom: 30px; */
+  background-color: #fff;
+  height: 300px;
+  border:1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  /* padding-bottom: 30px; */
 }
 
 .image-container .panel .title{
-    font-size: 18px;
-    font-weight: 600;
-    text-align: top;
-    padding: 0;
-    color: rgba(0,0,0,0.7);
-    text-align: center;
-    text-transform: capitalize;
+  /* display: flex; */
+  padding: auto;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: top;
+  padding: 0;
+  margin: 0;
+  color: rgba(0,0,0,0.7);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.image-container .panel .detail{
+  font-size: 12px;
+  font-weight: normal;
+  text-align: top;
+  /* padding-left: 20px;
+  margin-left: 20px; */
+  color: rgba(0,0,0,0.5);
+  text-align: center;
+  text-transform: capitalize;
+  /* padding-top: 5px; */
+  margin: 0px;
+  vertical-align: top;
+  
+
 }
 
 .image-container .panel .image{
