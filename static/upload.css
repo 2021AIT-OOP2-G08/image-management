@@ -115,3 +115,8 @@ a{
 	text-decoration: none;
 }
 
+select[name="header_select"]{
+	background-color: #76d5f5;
+	border: #76d5f5;
+	color: white;
+}
