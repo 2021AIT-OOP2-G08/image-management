@@ -29,6 +29,7 @@ header {
 	padding: 15px 0;
 	background-color:#76d5f5;
 	color: black;
+    box-shadow: 0 3px 6px rgba(185, 182, 182, 0.5);
 }
 header .headline{
 	  line-height: 40px;

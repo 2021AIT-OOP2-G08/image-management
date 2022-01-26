@@ -9,14 +9,22 @@
 
         <script src="js/leaflet.sprite.js"></script>
 
-        <link rel="stylesheet" href="map_style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='map_style.css') }}">
+        <link rel="stylesheet" href={{ url_for('static', filename="font.css") }}>
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
     </head>
     <body>
-        <h1>日本地図</h1>
-        <a href="/upload">アップロード画面へ</a>
+        <header>
+            <h2 class="headline">
+                <a>日本地図</a>
+            </h2>
+            <ul class="nav-list">
+                <li class="nav-list-item">
+                    <a href="/upload" class="cp_link">アップロード画面</a>
+                </li>
+            </ul>
+        </header>
         <div id="mymap" style="width:80vw;height:50vw;"></div>
-
         <script>
           /* 緯度・経度と倍率の指定 */
           var points = new Array();
